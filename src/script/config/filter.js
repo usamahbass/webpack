@@ -17,19 +17,17 @@ const filterSearch = () => {
       });
 
       $(".results tbody tr")
-        .not(`:containsi('" , ${searchSplit}, "')`)
+        .not(`:containsi('" ${searchSplit} "')`)
         .each(function (e) {
           $(this).attr("visible", "false");
         });
 
-      $(`.results tbody tr:containsi('", ${searchSplit}, "')`).each(function (
-        e
-      ) {
+      $(`.results tbody tr:containsi('" ${searchSplit} "')`).each(function (e) {
         $(this).attr("visible", "true");
       });
 
       const cityCount = $('.results tbody tr[visible="true"]').length;
-      $(".counter").text(cityCount + " kota");
+      $(".counter").text(`${cityCount} kota`);
 
       if (cityCount == "0") {
         $(".no-result").show();
