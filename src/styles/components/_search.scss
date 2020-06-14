@@ -1,0 +1,41 @@
+$box-neumorphism: 5px 5px 10px #999898, -5px -5px 10px #ffffff;
+$box-neumorphism-dark: 5px 5px 10px #515151, -5px -5px 10px #818181;
+$dark-background: #696969;
+$light-backgrund: #efeeee;
+
+.form-control {
+  border-radius: 15px;
+  padding: 8px;
+  font-family: "Spectral", FontAwesome;
+}
+
+.bg-ui {
+  display: none;
+  transition: 0.5s ease-out;
+  margin-left: -40px;
+  z-index: 100;
+
+  .fa-spinner {
+    display: none;
+    transition: 0.5s ease-in;
+  }
+}
+
+.bg-ui-light {
+  background: $light-backgrund;
+  box-shadow: $box-neumorphism;
+
+  .fa-times,
+  .fa-spinner {
+    color: dimgray;
+  }
+
+  &:focus {
+    box-shadow: $box-neumorphism;
+  }
+}
+
+.active {
+  display: block;
+  transition: 0.5s ease-in;
+}

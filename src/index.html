@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Covid Apps</title>
+  </head>
+  <body class="lightmode">
+    <div id="loader" class="loaderlight"></div>
+    <header>
+      <side-bar class="ui-light"></side-bar>
+    </header>
+    <main id="content">
+      <h1 class="text-center mb-5">Covid <i class="fas fa-virus"></i> Apps</h1>
+
+      <div class="container" id="allTabsContainer">
+        <!-- Tab Data -->
+
+        <section class="tab-container" data-tab-index="0">
+          <div class="input-group ml-lg-5 mb-5">
+            <input
+              type="text"
+              class="form-control ui-light-form"
+              id="searchElement"
+              placeholder="&#xF002; Cari negaramu [Enter]"
+            />
+            <button class="btn bg-ui bg-ui-light">
+              <i class="fa fa-times" id="timesElement"></i>
+              <i class="fa fa-spinner fa-spin" id="spinnerElement"></i>
+            </button>
+          </div>
+
+          <div id="textError"></div>
+
+          <div class="row ml-lg-5" id="listData"></div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-14">
+              <div class="card ui-light ml-lg-5">
+                <div class="card-header">
+                  <p
+                    class="card-title text-center text-uppercase text-dimgray font-weight-bold"
+                  >
+                    Data corona di Indonesia berdasarkan Provinsi
+                  </p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <div class="form-group pull-right">
+                      <input
+                        type="text"
+                        class="search form-control ui-light-form"
+                        placeholder="&#xF002; Cari kotamu [Filter] "
+                      />
+                    </div>
+                    <span class="counter pull-right"></span>
+                    <table class="table results ui-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="font-weight-bold">Provinsi</th>
+                          <th scope="col" class="font-weight-bold">Positif</th>
+                          <th scope="col" class="font-weight-bold">Sembuh</th>
+                          <th scope="col" class="font-weight-bold">
+                            Meninggal
+                          </th>
+                        </tr>
+                        <tr class="warning no-result">
+                          <td colspan="4" class="text-center">
+                            <i class="fa fa-times"></i> Tidak ditemukan
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody id="tableList"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab Wisma -->
+
+        <section
+          class="tab-container"
+          data-tab-index="1"
+          style="display: none;"
+        >
+          <h4 class="text-center mb-5">Data RS Wisma Atlet</h4>
+
+          <div class="row ml-lg-5" id="listWisma"></div>
+        </section>
+
+        <!-- Tab Dunia -->
+
+        <section
+          class="tab-container"
+          data-tab-index="2"
+          style="display: none;"
+        >
+          <div class="row ml-lg-5" id="listDunia"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="text-center text-dimgray">
+      <p>&copy; <span class="tahun"></span> developed by Bass</p>
+    </footer>
+  </body>
+</html>

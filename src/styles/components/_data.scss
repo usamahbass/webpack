@@ -1,0 +1,78 @@
+$box-neumorphism: 5px 5px 10px #a5a4a4, -5px -5px 10px #ffffff;
+$box-neumorphism-dark: 5px 5px 10px #515151, -5px -5px 10px #818181;
+$dark-background: #696969;
+$light-background: #efeeee;
+
+#content {
+  padding: 1rem;
+  padding-bottom: 10rem;
+  display: inline;
+
+  #allTabsContainer {
+    transition: display 1s;
+
+    &::after {
+      z-index: -2;
+      content: "";
+      background: $light-background;
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: -50px;
+      right: 0;
+      border-radius: 50%;
+    }
+
+    .tab-container {
+      transition: display 1s;
+    }
+  }
+
+  h1 {
+    top: 0;
+    color: dimgray;
+    opacity: 0.9;
+    z-index: 999;
+  }
+
+  .card {
+    border-radius: 20px;
+    border: none;
+
+    .card-header {
+      background-color: transparent;
+      border-bottom: none;
+    }
+  }
+
+  .results tr[visible="false"],
+  .no-result {
+    display: none;
+  }
+
+  .results tr[visible="true"] {
+    display: table-row;
+  }
+
+  .counter {
+    padding: 8px;
+    color: #ccc;
+  }
+
+  .table-responsive {
+    display: block;
+    width: 100%;
+    height: 550px;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  #content {
+    #allTabsContainer {
+      &::after {
+        background: transparent;
+      }
+    }
+  }
+}

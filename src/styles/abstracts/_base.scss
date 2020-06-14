@@ -1,0 +1,148 @@
+$box-neumorphism: 5px 5px 10px #999898, -5px -5px 10px #ffffff;
+$box-neumorphism-dark: 5px 5px 10px #515151, -5px -5px 10px #818181;
+$dark-background: #696969;
+$light-background: #efeeee;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Spectral", serif;
+  font-size: 1.1rem;
+}
+
+.lightmode {
+  background-color: $light-background;
+  color: dimgray;
+
+  &::-webkit-scrollbar {
+    width: 0.8em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: $box-neumorphism;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+  }
+
+  .loaderlight {
+    border: calc(200px / 10) solid #ddd;
+    border-top: 20px solid #efeeee;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px inset #ccc;
+  }
+
+  .ui-light-form {
+    border: 1px solid $light-background;
+    background-color: $light-background;
+    box-shadow: $box-neumorphism;
+
+    &:focus {
+      border: 1px solid $light-background;
+      background: $light-background;
+      box-shadow: $box-neumorphism;
+    }
+  }
+
+  .ui-light {
+    box-shadow: $box-neumorphism;
+    background-color: $light-background;
+
+    thead,
+    tbody {
+      color: $dark-background;
+    }
+  }
+}
+
+.darkmode {
+  background-color: #696969;
+  color: white;
+  transition: background-color 1s;
+
+  &::-webkit-scrollbar {
+    width: 0.8em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: $box-neumorphism-dark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #515151;
+  }
+
+  #content {
+    h1 {
+      color: $light-background;
+    }
+  }
+
+  .loaderdark {
+    border: calc(200px / 10) solid #999898;
+    border-top: 20px solid $dark-background;
+    border-radius: 100%;
+    box-shadow: $box-neumorphism-dark;
+  }
+
+  .ui-dark {
+    box-shadow: $box-neumorphism-dark;
+    background-color: $dark-background;
+    color: $light-background;
+
+    thead,
+    tbody {
+      color: $light-background;
+    }
+
+    .navbar_logo {
+      border-bottom: none;
+    }
+
+    .navbar_link {
+      color: $light-background;
+
+      &:hover {
+        box-shadow: $box-neumorphism-dark;
+      }
+    }
+
+    .navbar_active {
+      box-shadow: $box-neumorphism-dark;
+    }
+  }
+
+  .bg-ui-dark {
+    background: $dark-background;
+    box-shadow: $box-neumorphism-dark;
+
+    .fa-times,
+    .fa-spinner {
+      color: #efeeee;
+    }
+
+    &:focus {
+      box-shadow: $box-neumorphism-dark;
+    }
+  }
+
+  .ui-dark-form {
+    border: 1px solid $dark-background;
+    background-color: $dark-background;
+    box-shadow: $box-neumorphism-dark;
+    color: $light-background;
+
+    &:focus {
+      border: 1px solid $dark-background;
+      background: $dark-background;
+      box-shadow: $box-neumorphism-dark;
+    }
+
+    &::placeholder {
+      color: $light-background;
+    }
+  }
+}
